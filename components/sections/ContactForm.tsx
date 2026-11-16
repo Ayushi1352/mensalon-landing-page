@@ -8,7 +8,7 @@ import { FormSuccess, Spinner } from "@/components/ui/FormSuccess";
 
 /** Outlined fields with an icon on the left */
 const base =
-  "w-full appearance-none rounded-lg border-[1.5px] border-[var(--color-border-field)] bg-[var(--color-bg-main)] pl-12 pr-4 text-base text-[var(--color-heading)] outline-none transition-colors placeholder:text-[var(--color-text)] focus:border-[var(--color-brown)] lg:rounded-[0.5rem] lg:border-[0.07rem] lg:pl-[3.5rem] lg:text-[1.125rem]";
+  "w-full appearance-none rounded-lg border-[1.5px] border-[var(--color-border-field)] bg-[var(--color-bg-main)] pl-12 pr-4 text-base text-[var(--color-heading)] outline-none transition-colors placeholder:text-[var(--color-text)] focus:border-[var(--color-brown)] lg:rounded-[0.5rem] lg:border-[0.07rem] lg:pl-[3.5rem] lg:text-[1.03rem]";
 const field = `${base} h-[3.25rem] lg:h-[3rem]`;
 const iconClass = "pointer-events-none absolute left-4 size-5 text-[var(--color-heading)] lg:left-[1.15rem] lg:size-[1.25rem]";
 
@@ -51,7 +51,7 @@ export const ContactForm = ({ data }: { data?: ContactFormData }) => {
       onSubmit={submit.onSubmit}
       onInput={submit.onInput}
       aria-busy={submit.sending}
-      className="mt-6 grid gap-4 sm:grid-cols-2 lg:mt-[2rem] lg:gap-x-[1.2rem] lg:gap-y-[1.25rem]"
+      className="mt-6 grid gap-4 sm:grid-cols-2 lg:mt-[2.2rem] lg:gap-x-[1.2rem] lg:gap-y-[1.25rem]"
     >
       <Field icon={fields.name.icon}>
         <input name="name" required placeholder={fields.name.placeholder} aria-label={fields.name.placeholder} autoComplete="name" className={field} />
@@ -91,7 +91,7 @@ export const ContactForm = ({ data }: { data?: ContactFormData }) => {
         <button
           type="submit"
           disabled={submit.sending}
-          className="group mx-auto mt-2 flex h-14 w-full max-w-xs items-center justify-center gap-3 rounded-lg bg-gradient-to-b from-[var(--color-brown-light)] to-[var(--color-brown)] text-lg font-semibold text-[var(--color-white)] shadow-[0_0.75rem_1.5rem_-0.75rem_var(--color-shadow-bronze)] transition-[filter] hover:brightness-110 disabled:cursor-wait disabled:opacity-80 sm:col-span-2 lg:mt-[0.4rem] lg:h-[3.3rem] lg:w-[19rem] lg:max-w-none lg:rounded-[0.5rem] lg:text-[1.4rem]"
+          className="group mx-auto mt-2 flex h-14 w-full max-w-xs items-center justify-center gap-3 rounded-lg bg-[var(--color-brown-button)] text-lg font-semibold text-[var(--color-white)] shadow-[0_0.75rem_1.5rem_-0.75rem_var(--color-shadow-bronze)] transition-colors hover:bg-[var(--color-gold-deep)] hover:text-[var(--color-heading)] disabled:cursor-wait disabled:opacity-80 sm:col-span-2 lg:mt-[0.4rem] lg:h-[3.3rem] lg:w-[19rem] lg:max-w-none lg:rounded-[0.5rem] lg:text-[1.3rem]"
         >
           {submit.sending ? (
             <>

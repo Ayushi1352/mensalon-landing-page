@@ -18,10 +18,10 @@
     },
     "company": {
       "name": "Men’s Salon",
-      "logo": "/images/logo.webp",
+      "logo": "/images/mens-salon-logo.webp",
       "logoAlt": "Men’s Salon — Haircut • Grooming • Styling",
-      "logoWidth": 720,
-      "logoHeight": 160,
+      "logoWidth": 651,
+      "logoHeight": 114,
       "contactItems": [
         {
           "id": "our-location",
@@ -90,7 +90,7 @@
           "url": "https://www.instagram.com/"
         }
       ],
-      "copyrightText": "© {year} Men’s Salon. All Rights Reserved."
+      "copyrightText": "© {year} Men’s Salon. All Rights Reserved. Powered by Lestow."
     }
   },
   "categories": {
@@ -204,7 +204,7 @@
               "titleBottom": "Feel",
               "titleAccent": "Confident.",
               "description": "Professional haircuts, beard grooming,\nshaving and complete men’s care\nfor a stylish look.",
-              "image": "/images/hero.webp",
+              "image": "/images/hero-barber-shave.webp",
               "imageAlt": "Barber giving a client a straight razor shave with shaving foam"
             }
           }
@@ -223,13 +223,13 @@
               "features": [
                 {
                   "id": "experienced-barbers",
-                  "icon": "LuScissors",
+                  "icon": "ScissorsUp",
                   "title": "Experienced Barbers",
                   "text": "Skilled professionals for the perfect look."
                 },
                 {
                   "id": "modern-setup",
-                  "icon": "LuArmchair",
+                  "icon": "PiOfficeChair",
                   "title": "Modern Setup",
                   "text": "A comfortable and stylish salon experience."
                 },
@@ -243,7 +243,10 @@
               "image": "/images/about-salon-interior.webp",
               "imageAlt": "Men’s Salon interior with black leather barber chairs and lit mirrors",
               "secondaryImage": "/images/about-barber-at-work.webp",
-              "secondaryImageAlt": "Barber trimming a client’s hair with scissors and comb"
+              "secondaryImageAlt": "Barber trimming a client’s hair with scissors and comb",
+              "videoUrl": "https://www.youtube.com/watch?v=e34LhtJEmaU",
+              "videoPlayLabel": "Play video",
+              "videoCloseLabel": "Close video"
             }
           }
         },
@@ -256,21 +259,21 @@
               "items": [
                 {
                   "id": "haircut-styling",
-                  "icon": "LuScissors",
+                  "icon": "ScissorsUp",
                   "title": "Haircut &\nStyling",
                   "image": "/images/service-haircut-styling.webp",
                   "imageAlt": "Man with a fresh textured haircut and skin fade"
                 },
                 {
                   "id": "beard-grooming",
-                  "icon": "GiBeard",
+                  "icon": "BeardFace",
                   "title": "Beard\nGrooming",
                   "image": "/images/service-beard-grooming.webp",
                   "imageAlt": "Man showing a neatly groomed full beard"
                 },
                 {
                   "id": "facial-treatment",
-                  "icon": "TbMoodNeutral",
+                  "icon": "ManFace",
                   "title": "Facial\nTreatment",
                   "image": "/images/service-facial-treatment.webp",
                   "imageAlt": "Man relaxing with a facial mask being applied"
@@ -311,25 +314,25 @@
               "stats": [
                 {
                   "id": "happy-clients",
-                  "icon": "LuUsers",
+                  "icon": "PiUsersThree",
                   "value": "3K+",
                   "label": "Happy Clients"
                 },
                 {
                   "id": "haircuts-done",
-                  "icon": "LuScissors",
+                  "icon": "ScissorsUp",
                   "value": "5K+",
                   "label": "Haircuts Done"
                 },
                 {
                   "id": "years-of-experience",
-                  "icon": "LuCalendarCheck",
+                  "icon": "TbCalendarStats",
                   "value": "5+",
                   "label": "Years of\nExperience"
                 },
                 {
                   "id": "client-satisfaction",
-                  "icon": "LuTrophy",
+                  "icon": "TrophyStar",
                   "value": "100%",
                   "label": "Client\nSatisfaction"
                 }
@@ -351,7 +354,7 @@
               "items": [
                 {
                   "id": "classic-grooming",
-                  "icon": "GiBeard",
+                  "icon": "BeardFace",
                   "title": "Classic Grooming",
                   "price": "₹999",
                   "features": [
@@ -536,7 +539,7 @@
               "image": "/images/contact-barber-chair.webp",
               "imageAlt": "Black leather barber chair beside a lit arched mirror and shelves",
               "formTitle": "Send Us a Message",
-              "formIcon": "LuScissors"
+              "formIcon": "ScissorsUp"
             }
           }
         },
@@ -558,7 +561,7 @@
                 },
                 "service": {
                   "placeholder": "Service Interested In",
-                  "icon": "LuScissors"
+                  "icon": "ScissorsUp"
                 },
                 "message": {
                   "placeholder": "Your Message *",

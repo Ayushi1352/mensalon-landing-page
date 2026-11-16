@@ -7,9 +7,9 @@ import type { CompanyData, HeaderData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
 import { sectionId, useActiveSection } from "@/components/ui/useActiveSection";
 
-/** Gold "Book Appointment" button (a lighter gold on hover) */
+/** Gold "Book Appointment" button (turns bronze on hover) */
 const ctaClass =
-  "inline-flex items-center justify-center gap-2.5 rounded-lg bg-gradient-to-b from-[var(--color-gold-light)] to-[var(--color-gold-deep)] font-semibold text-[var(--color-heading)] shadow-[0_0.5rem_1.5rem_-0.75rem_var(--color-shadow-gold)] transition-[filter] hover:brightness-110 lg:gap-[0.75rem] lg:rounded-[0.47rem]";
+  "inline-flex items-center justify-center gap-2.5 rounded-lg bg-gradient-to-b from-[var(--color-gold-light)] to-[var(--color-gold-deep)] font-semibold text-[var(--color-heading)] shadow-[0_0.5rem_1.5rem_-0.75rem_var(--color-shadow-gold)] transition-colors hover:bg-none hover:bg-[var(--color-bronze)] hover:text-[var(--color-white)] lg:gap-[0.75rem] lg:rounded-[0.47rem]";
 
 export const Header = ({ data, company }: { data?: HeaderData; company: CompanyData }) => {
   const active = useActiveSection(data?.navLinks.map((link) => link.url) ?? []);
@@ -53,7 +53,7 @@ export const Header = ({ data, company }: { data?: HeaderData; company: CompanyD
                     href={item.url}
                     target={external ? "_blank" : undefined}
                     rel={external ? "noopener noreferrer" : undefined}
-                    className="flex items-center gap-2 whitespace-nowrap transition-opacity hover:opacity-70 lg:gap-[0.75rem]"
+                    className="flex items-center gap-2 whitespace-nowrap transition-colors hover:text-[var(--color-bronze-dark)] lg:gap-[0.75rem]"
                   >
                     <Icon name={item.icon} className="size-4 shrink-0 lg:size-[1.15rem]" strokeWidth={2} />
                     {item.text}
@@ -84,7 +84,7 @@ export const Header = ({ data, company }: { data?: HeaderData; company: CompanyD
       <header className="sticky top-0 z-40 font-accent bg-[var(--color-bg-nav)] shadow-[0_0.75rem_2rem_-1.25rem_var(--color-shadow-header)]">
         <div className="flex h-[4.5rem] items-center justify-between gap-6 px-4 sm:px-6 lg:h-[5.5rem] lg:pl-[3.3rem] lg:pr-[1.65rem]">
           <Link href={data.logoUrl} onClick={goHome} aria-label={data.homeLabel} className="shrink-0">
-            <Image src={company.logo} alt={company.logoAlt} width={company.logoWidth} height={company.logoHeight} preload sizes="(min-width: 1024px) 22vw, 220px" className="h-auto w-44 sm:w-52 lg:w-[20.15rem]" />
+            <Image src={company.logo} alt={company.logoAlt} width={company.logoWidth} height={company.logoHeight} preload sizes="(min-width: 1024px) 23vw, 210px" className="h-auto w-44 sm:w-52 lg:w-[20.15rem]" />
           </Link>
 
           <div className="flex items-center gap-3 lg:gap-[2rem]">
@@ -96,7 +96,7 @@ export const Header = ({ data, company }: { data?: HeaderData; company: CompanyD
                     key={link.id}
                     href={link.url}
                     aria-current={current ? "location" : undefined}
-                    className={`relative py-[0.4rem] text-[1.17rem] font-medium transition-colors after:absolute after:inset-x-0 after:-bottom-[0.3rem] after:h-[0.15rem] after:rounded-full after:bg-current after:transition-transform ${
+                    className={`relative py-[0.4rem] text-[1.15rem] font-medium transition-colors after:absolute after:inset-x-0 after:-bottom-[0.3rem] after:h-[0.15rem] after:rounded-full after:bg-current after:transition-transform ${
                       current
                         ? "text-[var(--color-gold-soft)] after:scale-x-100"
                         : "text-[var(--color-white)] after:scale-x-0 hover:text-[var(--color-gold-soft)]"

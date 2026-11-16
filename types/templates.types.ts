@@ -109,6 +109,9 @@ export interface AboutData {
   imageAlt: string;
   secondaryImage: string;
   secondaryImageAlt: string;
+  videoUrl: string;
+  videoPlayLabel: string;
+  videoCloseLabel: string;
 }
 
 export interface ServiceItem {

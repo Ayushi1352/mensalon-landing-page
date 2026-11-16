@@ -20,9 +20,9 @@ const Card = ({ item, rating, ratingLabel, className = "" }: { item: Testimonial
       <span className="relative size-24 shrink-0 overflow-hidden rounded-full ring-[0.1875rem] ring-[var(--color-gold)] lg:size-[8.45rem] lg:ring-[0.15rem]">
         <Image src={item.image} alt="" fill sizes="(min-width: 1024px) 9rem, 6rem" className="object-cover" />
       </span>
-      <span className="-mt-3 lg:-mt-[1.4rem]">
+      <span className="-mt-3 lg:-mt-[0.85rem]">
         <cite className="block font-heading text-xl font-bold not-italic text-[var(--color-white)] lg:text-[1.7rem]">{item.name}</cite>
-        <span role="img" aria-label={ratingLabel} className="mt-1.5 flex gap-1 text-[var(--color-gold)] lg:mt-[0.65rem] lg:gap-[0.3rem]">
+        <span role="img" aria-label={ratingLabel} className="mt-1.5 flex gap-1 text-[var(--color-gold)] lg:mt-[0.95rem] lg:gap-[0.3rem]">
           {Array.from({ length: rating }, (_, n) => (
             <Icon key={n} name="FaStar" className="size-5 lg:size-[1.45rem]" />
           ))}
@@ -30,10 +30,10 @@ const Card = ({ item, rating, ratingLabel, className = "" }: { item: Testimonial
       </span>
     </footer>
 
-    <p className="mt-5 flex-1 pl-0 font-accent text-base leading-relaxed tracking-[0.02em] text-[var(--color-white-90)] sm:pl-4 lg:mt-[1.4rem] lg:pl-[1.2rem] lg:pr-[0.6rem] lg:text-[1.38rem] lg:leading-[1.8rem]">
+    <p className="mt-5 flex-1 pl-0 font-accent text-base leading-relaxed tracking-[0.02em] text-[var(--color-white-90)] sm:pl-4 lg:mt-[1.05rem] lg:pl-[1.2rem] lg:pr-0 lg:text-[1.42rem] lg:leading-[1.8rem] lg:tracking-[0.03em]">
       {item.quote}
     </p>
-    <span aria-hidden="true" className="mx-[8%] mb-6 mt-5 h-[0.1875rem] rounded-full bg-gradient-to-r from-transparent via-[var(--color-gold)] to-transparent lg:mb-[1.65rem] lg:mt-[1.3rem] lg:h-[0.15rem]" />
+    <span aria-hidden="true" className="mx-[8%] mb-6 mt-5 h-[0.1875rem] rounded-full bg-gradient-to-r from-transparent via-[var(--color-gold)] to-transparent lg:mb-[1.6rem] lg:mt-[1rem] lg:h-[0.19rem]" />
   </blockquote>
 );
 

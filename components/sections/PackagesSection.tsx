@@ -2,12 +2,12 @@ import type { PackageItem, PackagesData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
 import { MustacheDivider } from "@/components/ui/MustacheDivider";
 
-/** Price tag with angled ends, flanked by thin lines */
+/** Ribbon-style price tag (ends cut inwards), flanked by thin lines */
 const PriceTag = ({ price, featured }: { price: string; featured: boolean }) => (
-  <div className="mt-4 flex items-center justify-center gap-3 lg:mt-[0.7rem] lg:gap-[0.75rem]">
+  <div className="mt-4 flex items-center justify-center gap-3 lg:mt-[0.45rem] lg:gap-[0.6rem]">
     <span aria-hidden="true" className={`h-px w-10 lg:w-[3.05rem] ${featured ? "bg-[var(--color-maroon-40)]" : "bg-[var(--color-gold-50)]"}`} />
     <span
-      className={`grid h-12 min-w-[8.5rem] place-items-center px-6 font-heading text-[1.75rem] font-bold [clip-path:polygon(6%_0,94%_0,100%_50%,94%_100%,6%_100%,0_50%)] lg:h-[2.8rem] lg:min-w-[9.4rem] lg:px-[1.5rem] lg:text-[2.05rem] ${
+      className={`grid h-12 min-w-[8.5rem] place-items-center px-6 font-heading text-[1.75rem] font-bold [clip-path:polygon(0_0,100%_0,94%_50%,100%_100%,0_100%,6%_50%)] lg:h-[2.8rem] lg:min-w-[9.4rem] lg:px-[1.5rem] lg:text-[2.05rem] ${
         featured
           ? "bg-gradient-to-b from-[var(--color-maroon)] to-[var(--color-maroon-dark)] text-[var(--color-white)]"
           : "bg-gradient-to-b from-[var(--color-gold-light)] to-[var(--color-gold-deep)] text-[var(--color-heading)]"
@@ -36,10 +36,10 @@ const PackageCard = ({ item, index }: { item: PackageItem; index: number }) => {
       </span>
 
       <div
-        className={`relative flex w-full flex-col overflow-hidden rounded-3xl border px-6 pb-8 pt-10 text-center lg:rounded-[1.3rem] lg:px-[1.5rem] lg:pb-[1.75rem] lg:pt-[2.1rem] ${
+        className={`relative flex w-full flex-col overflow-hidden rounded-3xl border px-6 pb-8 pt-10 text-center lg:rounded-[1.3rem] lg:px-[1.5rem] lg:pb-[1.2rem] lg:pt-[2.1rem] ${
           featured
             ? "border-[var(--color-gold-deep)] bg-[radial-gradient(120%_80%_at_50%_0%,var(--color-cream-light),var(--color-cream-gold)_70%,var(--color-gold-soft))] shadow-[0_0_2.5rem_-0.75rem_var(--color-gold-50)]"
-            : "border-[var(--color-gold-dim)] bg-gradient-to-b from-[var(--color-bg-card-dark)] to-[var(--color-bg-darker)]"
+            : "border-[var(--color-gold-line)] bg-gradient-to-b from-[var(--color-bg-card-dark)] to-[var(--color-bg-darker)]"
         }`}
       >
         {/* corner ribbon of the featured package */}
@@ -52,11 +52,12 @@ const PackageCard = ({ item, index }: { item: PackageItem; index: number }) => {
         <h3 className={`font-heading text-2xl font-bold lg:text-[1.7rem] ${featured ? "text-[var(--color-heading)]" : "text-[var(--color-white)]"}`}>{item.title}</h3>
         <PriceTag price={item.price} featured={featured} />
 
-        <ul className="mx-auto mt-5 grid w-fit gap-2.5 text-left lg:mt-[0.8rem] lg:gap-[0.45rem]">
+        {/* on desktop the list starts at a fixed distance from the card's left edge, as in the design */}
+        <ul className={`mx-auto mb-7 mt-5 grid w-fit gap-2.5 text-left lg:mb-[0.7rem] lg:mt-[0.75rem] lg:gap-[0.5rem] ${featured ? "lg:ml-[4.2rem]" : "lg:ml-[3.2rem]"}`}>
           {item.features.map((feature) => (
             <li
               key={feature.id}
-              className={`flex items-center gap-3 text-base lg:gap-[0.95rem] lg:text-[1.125rem] lg:leading-[1.5rem] ${featured ? "text-[var(--color-heading)]" : "text-[var(--color-white-85)]"}`}
+              className={`flex items-center gap-3 text-base lg:gap-[1.25rem] lg:text-[1.05rem] lg:leading-[1.4rem] ${featured ? "text-[var(--color-heading)]" : "text-[var(--color-white-85)]"}`}
             >
               <Icon name="LuCircleCheck" className={`size-5 shrink-0 lg:size-[1.4rem] ${featured ? "text-[var(--color-maroon)]" : "text-[var(--color-gold-deep)]"}`} strokeWidth={2} />
               {feature.text}
@@ -66,10 +67,10 @@ const PackageCard = ({ item, index }: { item: PackageItem; index: number }) => {
 
         <a
           href={item.buttonUrl}
-          className={`group mx-auto mt-auto inline-flex h-12 font-accent items-center justify-center gap-2.5 rounded-xl px-10 text-lg font-semibold transition-[filter,transform] hover:-translate-y-0.5 hover:brightness-110 lg:h-[2.65rem] lg:w-[11.8rem] lg:rounded-[0.75rem] lg:px-0 lg:text-[1.22rem] ${
+          className={`group mx-auto mt-auto inline-flex h-12 whitespace-nowrap font-accent items-center justify-center gap-2.5 rounded-xl px-10 text-lg font-bold transition-[color,background-color,transform] hover:-translate-y-0.5 hover:bg-none lg:h-[2.65rem] lg:w-[11.8rem] lg:rounded-[0.75rem] lg:px-0 lg:text-[1.3rem] ${
             featured
-              ? "bg-gradient-to-b from-[var(--color-maroon)] to-[var(--color-maroon-dark)] text-[var(--color-white)]"
-              : "bg-gradient-to-b from-[var(--color-gold-light)] to-[var(--color-gold-deep)] text-[var(--color-heading)]"
+              ? "bg-gradient-to-b from-[var(--color-maroon)] to-[var(--color-maroon-dark)] text-[var(--color-white)] hover:bg-[var(--color-gold-deep)] hover:text-[var(--color-heading)]"
+              : "bg-gradient-to-b from-[var(--color-gold-light)] to-[var(--color-gold-deep)] text-[var(--color-heading)] hover:bg-[var(--color-bronze)] hover:text-[var(--color-white)]"
           }`}
         >
           {item.buttonText}
@@ -99,11 +100,11 @@ export const PackagesSection = ({ data }: { data?: PackagesData }) => {
             </div>
             <span aria-hidden="true" className="h-px w-10 shrink-0 bg-[var(--color-gold-soft)] sm:w-16 lg:mt-[1.6rem] lg:h-[0.1rem] lg:w-[5.7rem]" />
           </div>
-          <p className="mt-2 text-base text-[var(--color-white-85)] lg:mt-[0.3rem] lg:text-[1.03rem]">{data.description}</p>
+          <p className="mt-2 text-base text-[var(--color-white-85)] lg:mt-0 lg:text-[0.97rem]">{data.description}</p>
           <MustacheDivider className="mt-1 text-[var(--color-gold-soft)] lg:-mt-[0.2rem]" lineClassName="w-20 lg:w-[7.5rem]" mustacheClassName="h-3.5 w-9 lg:h-[0.95rem] lg:w-[2.6rem]" />
         </div>
 
-        <ul className="mx-auto mt-10 grid max-w-md gap-8 md:max-w-none md:grid-cols-3 md:gap-4 lg:mt-[1.6rem] lg:gap-[1.3rem]">
+        <ul className="mx-auto mt-10 grid max-w-md gap-8 lg:max-w-none lg:grid-cols-3 lg:mt-[2.1rem] lg:gap-[1.3rem]">
           {data.items.map((item, index) => (
             <PackageCard key={item.id} item={item} index={index} />
           ))}

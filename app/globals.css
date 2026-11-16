@@ -18,6 +18,7 @@
   --color-gold-deep: #e2a93a;
   --color-gold-frame: #d8a24a;
   --color-gold-dim: #8a6a2c;
+  --color-gold-line: #b8913f;
   /* Bronze and brown (titles and icons on the light sections) */
   --color-bronze: #9b5e0e;
   --color-bronze-dark: #82500b;
@@ -26,7 +27,7 @@
   --color-amber-dark: #b06d10;
   --color-amber-light: #d08a1f;
   --color-brown: #893e04;
-  --color-brown-light: #a85c12;
+  --color-brown-button: #8e4a0c;
   --color-brown-border: #b07040;
   /* Featured package */
   --color-maroon: #8b1a2a;
@@ -34,6 +35,7 @@
   --color-cream-light: #fff8e6;
   --color-cream-gold: #f7e2ad;
   --color-peach: #fdeedd;
+  --color-hero-cream: #f1e6d2;
 
   /* Text */
   --color-heading: #0a0a0a;

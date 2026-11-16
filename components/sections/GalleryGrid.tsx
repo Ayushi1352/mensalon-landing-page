@@ -31,7 +31,8 @@ export const GalleryGrid = ({ data }: { data: GalleryData }) => {
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-2.5 sm:gap-3 md:grid-cols-4 lg:gap-[0.66rem]">
+      {/* on desktop the outer columns are a little wider, as in the design */}
+      <div className="grid grid-cols-2 gap-2.5 sm:gap-3 md:grid-cols-4 lg:grid-cols-[337fr_329fr_329fr_337fr] lg:gap-x-[0.94rem] lg:gap-y-[1rem]">
         {items.map((photo, i) => (
           <button
             key={photo.id}

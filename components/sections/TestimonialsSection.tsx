@@ -21,14 +21,14 @@ export const TestimonialsSection = ({ data }: { data?: TestimonialsData }) => {
             className="text-sm font-semibold tracking-[0.25em] text-[var(--color-white)] lg:text-[1.4rem] lg:tracking-[0.22em]"
             lineClassName="w-10 text-[var(--color-gold)] sm:w-16 lg:w-[5.6rem]"
           />
-          <h2 className="mt-3 font-heading text-[2.125rem] font-bold leading-[1.12] text-[var(--color-white)] sm:text-5xl lg:mt-[1rem] lg:text-[3.48rem] lg:leading-[1.1]">
+          <h2 className="mt-3 font-heading text-[2.125rem] font-semibold leading-[1.12] text-[var(--color-white)] sm:text-5xl lg:mt-[1.4rem] lg:text-[3.48rem] lg:leading-[1.1]">
             <span className="block">{data.titleTop}</span>
             <span className="block text-[var(--color-gold)]">{data.titleAccent}</span>
           </h2>
-          <MustacheDivider className="mt-3 text-[var(--color-gold)] lg:mt-[0.6rem]" mustacheClassName="h-6 w-14 lg:h-[1.85rem] lg:w-[5.4rem]" lineClassName="w-20 sm:w-32 lg:w-[11rem]" />
+          <MustacheDivider className="mt-3 text-[var(--color-gold)] lg:mt-[1.1rem]" mustacheClassName="h-6 w-14 lg:h-[1.85rem] lg:w-[5.4rem]" lineClassName="w-20 sm:w-32 lg:w-[11rem]" />
         </div>
 
-        <div className="mt-8 lg:mt-[2.6rem]">
+        <div className="mt-8 lg:mt-[1.7rem]">
           <TestimonialSlider data={data} />
         </div>
       </div>
