@@ -1,26 +1,89 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --font-primary: Arial, sans-serif;
+  --font-heading: Georgia, serif;
+  --font-label: Arial, sans-serif;
+  --font-condensed: "Arial Narrow", sans-serif;
+  --font-accent: Arial, sans-serif;
+  --font-footer: Arial, sans-serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Men's Salon theme */
+  /* Gold (from the logo and the dark sections) */
+  --color-gold: #f8bd2c;
+  --color-gold-soft: #f2c45f;
+  --color-gold-light: #fbe2a6;
+  --color-gold-deep: #e2a93a;
+  --color-gold-frame: #d8a24a;
+  --color-gold-dim: #8a6a2c;
+  /* Bronze and brown (titles and icons on the light sections) */
+  --color-bronze: #9b5e0e;
+  --color-bronze-dark: #82500b;
+  --color-bronze-line: #b5761c;
+  --color-amber: #c47a12;
+  --color-amber-dark: #b06d10;
+  --color-amber-light: #d08a1f;
+  --color-brown: #893e04;
+  --color-brown-light: #a85c12;
+  --color-brown-border: #b07040;
+  /* Featured package */
+  --color-maroon: #8b1a2a;
+  --color-maroon-dark: #6d0f1e;
+  --color-cream-light: #fff8e6;
+  --color-cream-gold: #f7e2ad;
+  --color-peach: #fdeedd;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /* Text */
+  --color-heading: #0a0a0a;
+  --color-heading-soft: #231c1a;
+  --color-text: #2e2e2e;
+  --color-text-muted: #3b3636;
+  --color-white: #ffffff;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Backgrounds and borders */
+  --color-bg-main: #ffffff;
+  --color-bg-cream: #fcf7f3;
+  --color-bg-blush: #fefaf9;
+  --color-bg-hero: #0e0e0e;
+  --color-bg-nav: #0d0d0d;
+  --color-bg-dark: #121214;
+  --color-bg-darker: #0a0a0a;
+  --color-bg-black: #000000;
+  --color-bg-panel: #1f1f1e;
+  --color-bg-panel-light: #2c2c2a;
+  --color-bg-card-dark: #1b1b1b;
+  /* Shown on both sides of the page when the screen is wider than 1920px (or the browser is zoomed out). */
+  --color-bg-backdrop: #1a1a1a;
+  --color-border: #e6ddd5;
+  --color-border-warm: #d9cfc8;
+  --color-border-field: #c9c9c9;
+
+  /* Overlays */
+  --color-bg-hero-40: rgba(14, 14, 14, 0.4);
+  --color-bg-hero-60: rgba(14, 14, 14, 0.6);
+  --color-gold-50: rgba(248, 189, 44, 0.5);
+  --color-maroon-40: rgba(139, 26, 42, 0.4);
+  --color-heading-30: rgba(10, 10, 10, 0.3);
+  --color-black-20: rgba(0, 0, 0, 0.2);
+  --color-black-60: rgba(0, 0, 0, 0.6);
+  --color-black-80: rgba(0, 0, 0, 0.8);
+  --color-black-85: rgba(0, 0, 0, 0.85);
+  --color-white-3: rgba(255, 255, 255, 0.03);
+  --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-15: rgba(255, 255, 255, 0.15);
+  --color-white-20: rgba(255, 255, 255, 0.2);
+  --color-white-60: rgba(255, 255, 255, 0.6);
+  --color-white-80: rgba(255, 255, 255, 0.8);
+  --color-white-85: rgba(255, 255, 255, 0.85);
+  --color-white-90: rgba(255, 255, 255, 0.9);
+
+  /* Shadows */
+  --color-shadow-header: rgba(0, 0, 0, 0.6);
+  --color-shadow-gold: rgba(226, 169, 58, 0.6);
+  --color-shadow-bronze: rgba(137, 62, 4, 0.55);
+  --color-shadow-card: rgba(60, 40, 20, 0.22);
+  --color-shadow-photo: rgba(0, 0, 0, 0.45);
+  --color-shadow-dark: rgba(0, 0, 0, 0.7);
 }

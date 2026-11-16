@@ -1,0 +1,636 @@
+{
+  "common": {
+    "theme": {
+      "fonts": {
+        "primary": "var(--font-inter)",
+        "heading": "var(--font-source-serif)",
+        "label": "var(--font-montserrat)",
+        "condensed": "var(--font-roboto-condensed)",
+        "accent": "var(--font-jost)",
+        "footer": "var(--font-open-sans)"
+      }
+    },
+    "metadata": {
+      "title": "Men’s Salon | Haircut • Grooming • Styling",
+      "description": "Premium men’s salon offering professional haircuts, beard grooming, shaving, facials and complete men’s care for a stylish look. Book your appointment today.",
+      "icon": "/images/favicon.png",
+      "lang": "en"
+    },
+    "company": {
+      "name": "Men’s Salon",
+      "logo": "/images/logo.webp",
+      "logoAlt": "Men’s Salon — Haircut • Grooming • Styling",
+      "logoWidth": 720,
+      "logoHeight": 160,
+      "contactItems": [
+        {
+          "id": "our-location",
+          "icon": "FaMapMarkerAlt",
+          "title": "Our Location",
+          "lines": [
+            "B-45, Greater Kailash,",
+            "New Delhi – 110048"
+          ],
+          "url": "https://www.google.com/maps/search/?api=1&query=B-45+Greater+Kailash+New+Delhi+110048"
+        },
+        {
+          "id": "call-us",
+          "icon": "FaPhoneAlt",
+          "title": "Call Us",
+          "lines": [
+            "+91 98765 43210"
+          ],
+          "url": "tel:+919876543210"
+        },
+        {
+          "id": "email-us",
+          "icon": "FaEnvelope",
+          "title": "Email Us",
+          "lines": [
+            "info@menssalon.com"
+          ],
+          "url": "mailto:info@menssalon.com"
+        }
+      ]
+    },
+    "Footer": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      "quickLinksTitle": "Quick Links",
+      "contactTitle": "Contact Information",
+      "socialTitle": "Follow Us",
+      "socialLinks": [
+        {
+          "id": "facebook",
+          "icon": "FaFacebookF",
+          "label": "Facebook",
+          "url": "https://www.facebook.com/"
+        },
+        {
+          "id": "twitter",
+          "icon": "FaTwitter",
+          "label": "Twitter",
+          "url": "https://twitter.com/"
+        },
+        {
+          "id": "pinterest",
+          "icon": "FaPinterestP",
+          "label": "Pinterest",
+          "url": "https://www.pinterest.com/"
+        },
+        {
+          "id": "linkedin",
+          "icon": "FaLinkedinIn",
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/"
+        },
+        {
+          "id": "instagram",
+          "icon": "FaInstagram",
+          "label": "Instagram",
+          "url": "https://www.instagram.com/"
+        }
+      ],
+      "copyrightText": "© {year} Men’s Salon. All Rights Reserved."
+    }
+  },
+  "categories": {
+    "MensSalon": {
+      "sections": {
+        "Header": {
+          "variants": {
+            "MensSalonHeader1": {
+              "logoUrl": "/",
+              "homeLabel": "Men’s Salon — back to top",
+              "topBarItems": [
+                {
+                  "id": "address",
+                  "icon": "FaMapMarkerAlt",
+                  "text": "1234 Maple Avenue, Suite 200, Los Angeles, CA 90015, USA",
+                  "url": "https://www.google.com/maps/search/?api=1&query=1234+Maple+Avenue+Suite+200+Los+Angeles+CA+90015+USA"
+                },
+                {
+                  "id": "phone",
+                  "icon": "FaPhoneAlt",
+                  "text": "+1 (213) 555-0198",
+                  "url": "tel:+12135550198"
+                },
+                {
+                  "id": "email",
+                  "icon": "LuMail",
+                  "text": "hello@menssalon.com",
+                  "url": "mailto:hello@menssalon.com"
+                }
+              ],
+              "followLabel": "Follow Us :",
+              "socialLinks": [
+                {
+                  "id": "instagram",
+                  "icon": "FaInstagram",
+                  "label": "Instagram",
+                  "url": "https://www.instagram.com/"
+                },
+                {
+                  "id": "facebook",
+                  "icon": "FaFacebookF",
+                  "label": "Facebook",
+                  "url": "https://www.facebook.com/"
+                },
+                {
+                  "id": "youtube",
+                  "icon": "FaYoutube",
+                  "label": "YouTube",
+                  "url": "https://www.youtube.com/"
+                },
+                {
+                  "id": "whatsapp",
+                  "icon": "FaWhatsapp",
+                  "label": "WhatsApp",
+                  "url": "https://wa.me/12135550198"
+                }
+              ],
+              "navLinks": [
+                {
+                  "id": "home",
+                  "label": "Home",
+                  "url": "#home"
+                },
+                {
+                  "id": "about-us",
+                  "label": "About Us",
+                  "url": "#about"
+                },
+                {
+                  "id": "services",
+                  "label": "Services",
+                  "url": "#services"
+                },
+                {
+                  "id": "packages",
+                  "label": "Packages",
+                  "url": "#packages"
+                },
+                {
+                  "id": "gallery",
+                  "label": "Gallery",
+                  "url": "#gallery"
+                },
+                {
+                  "id": "testimonials",
+                  "label": "Testimonials",
+                  "url": "#testimonials"
+                },
+                {
+                  "id": "contact-us",
+                  "label": "Contact Us",
+                  "url": "#contact"
+                }
+              ],
+              "buttonText": "Book Appointment",
+              "buttonIcon": "LuCalendarDays",
+              "buttonUrl": "#contact",
+              "mainNavLabel": "Main navigation",
+              "mobileNavLabel": "Mobile navigation",
+              "openMenuLabel": "Open menu",
+              "closeMenuLabel": "Close menu"
+            }
+          }
+        },
+        "Hero": {
+          "variants": {
+            "MensSalonHero1": {
+              "id": "home",
+              "label": "Premium Men’s Salon",
+              "titleTop": "Look Sharp",
+              "titleBottom": "Feel",
+              "titleAccent": "Confident.",
+              "description": "Professional haircuts, beard grooming,\nshaving and complete men’s care\nfor a stylish look.",
+              "image": "/images/hero.webp",
+              "imageAlt": "Barber giving a client a straight razor shave with shaving foam"
+            }
+          }
+        },
+        "About": {
+          "variants": {
+            "MensSalonAbout1": {
+              "id": "about",
+              "label": "About Us",
+              "titleTop": "About Our",
+              "titleAccent": "Men’s Salon",
+              "paragraphs": [
+                "A modern men’s salon offering professional haircuts, beard grooming and personalized styling in a comfortable and relaxing environment.",
+                "Our team of skilled barbers focuses on precision, style and customer satisfaction to ensure you always leave looking your best."
+              ],
+              "features": [
+                {
+                  "id": "experienced-barbers",
+                  "icon": "LuScissors",
+                  "title": "Experienced Barbers",
+                  "text": "Skilled professionals for the perfect look."
+                },
+                {
+                  "id": "modern-setup",
+                  "icon": "LuArmchair",
+                  "title": "Modern Setup",
+                  "text": "A comfortable and stylish salon experience."
+                },
+                {
+                  "id": "customer-focused",
+                  "icon": "LuHeart",
+                  "title": "Customer Focused",
+                  "text": "Quality service with a personal touch."
+                }
+              ],
+              "image": "/images/about-salon-interior.webp",
+              "imageAlt": "Men’s Salon interior with black leather barber chairs and lit mirrors",
+              "secondaryImage": "/images/about-barber-at-work.webp",
+              "secondaryImageAlt": "Barber trimming a client’s hair with scissors and comb"
+            }
+          }
+        },
+        "Services": {
+          "variants": {
+            "MensSalonServices1": {
+              "id": "services",
+              "label": "Our Services",
+              "title": "Men’s Grooming Services",
+              "items": [
+                {
+                  "id": "haircut-styling",
+                  "icon": "LuScissors",
+                  "title": "Haircut &\nStyling",
+                  "image": "/images/service-haircut-styling.webp",
+                  "imageAlt": "Man with a fresh textured haircut and skin fade"
+                },
+                {
+                  "id": "beard-grooming",
+                  "icon": "GiBeard",
+                  "title": "Beard\nGrooming",
+                  "image": "/images/service-beard-grooming.webp",
+                  "imageAlt": "Man showing a neatly groomed full beard"
+                },
+                {
+                  "id": "facial-treatment",
+                  "icon": "TbMoodNeutral",
+                  "title": "Facial\nTreatment",
+                  "image": "/images/service-facial-treatment.webp",
+                  "imageAlt": "Man relaxing with a facial mask being applied"
+                },
+                {
+                  "id": "hair-treatment",
+                  "icon": "LuDroplet",
+                  "title": "Hair\nTreatment",
+                  "image": "/images/service-hair-treatment.webp",
+                  "imageAlt": "Man getting a hair wash and treatment at the basin"
+                },
+                {
+                  "id": "head-massage",
+                  "icon": "PiFlowerLotus",
+                  "title": "Head\nMassage",
+                  "image": "/images/service-head-massage.webp",
+                  "imageAlt": "Man enjoying a relaxing head massage"
+                },
+                {
+                  "id": "skin-care",
+                  "icon": "LuLeaf",
+                  "title": "Skin\nCare",
+                  "image": "/images/service-skin-care.webp",
+                  "imageAlt": "Man with a charcoal face mask during skin care"
+                }
+              ]
+            }
+          }
+        },
+        "Why": {
+          "variants": {
+            "MensSalonWhy1": {
+              "id": "why-us",
+              "label": "Why Choose Us",
+              "titleTop": "The Perfect Grooming Experience",
+              "titleAccent": "for Men",
+              "description": "Where style meets care. We offer expert grooming, premium products, and a relaxing environment to make you look and feel your best.",
+              "stats": [
+                {
+                  "id": "happy-clients",
+                  "icon": "LuUsers",
+                  "value": "3K+",
+                  "label": "Happy Clients"
+                },
+                {
+                  "id": "haircuts-done",
+                  "icon": "LuScissors",
+                  "value": "5K+",
+                  "label": "Haircuts Done"
+                },
+                {
+                  "id": "years-of-experience",
+                  "icon": "LuCalendarCheck",
+                  "value": "5+",
+                  "label": "Years of\nExperience"
+                },
+                {
+                  "id": "client-satisfaction",
+                  "icon": "LuTrophy",
+                  "value": "100%",
+                  "label": "Client\nSatisfaction"
+                }
+              ],
+              "image": "/images/why-head-massage.webp",
+              "imageAlt": "Client relaxing during a head massage, with rolled towels and a plant beside him",
+              "secondaryImage": "/images/why-facial-mask.webp",
+              "secondaryImageAlt": "Barber brushing a cream face mask onto a client"
+            }
+          }
+        },
+        "Packages": {
+          "variants": {
+            "MensSalonPackages1": {
+              "id": "packages",
+              "label": "Our Packages",
+              "title": "Grooming Packages",
+              "description": "Choose the perfect grooming package for your style and care",
+              "items": [
+                {
+                  "id": "classic-grooming",
+                  "icon": "GiBeard",
+                  "title": "Classic Grooming",
+                  "price": "₹999",
+                  "features": [
+                    {
+                      "id": "haircut-styling",
+                      "text": "Haircut & Styling"
+                    },
+                    {
+                      "id": "beard-trim",
+                      "text": "Beard Trim"
+                    },
+                    {
+                      "id": "face-clean-up",
+                      "text": "Face Clean-Up"
+                    }
+                  ],
+                  "buttonText": "Book Now",
+                  "buttonUrl": "#contact",
+                  "featured": false,
+                  "badge": ""
+                },
+                {
+                  "id": "premium-grooming",
+                  "icon": "LuCrown",
+                  "title": "Premium Grooming",
+                  "price": "₹1,499",
+                  "features": [
+                    {
+                      "id": "haircut-styling",
+                      "text": "Haircut & Styling"
+                    },
+                    {
+                      "id": "beard-grooming",
+                      "text": "Beard Grooming"
+                    },
+                    {
+                      "id": "facial-treatment",
+                      "text": "Facial Treatment"
+                    },
+                    {
+                      "id": "head-massage",
+                      "text": "Head Massage"
+                    }
+                  ],
+                  "buttonText": "Book Now",
+                  "buttonUrl": "#contact",
+                  "featured": true,
+                  "badge": "Popular"
+                },
+                {
+                  "id": "royal-grooming",
+                  "icon": "LuGem",
+                  "title": "Royal Grooming",
+                  "price": "₹1,999",
+                  "features": [
+                    {
+                      "id": "haircut-styling",
+                      "text": "Haircut & Styling"
+                    },
+                    {
+                      "id": "beard-styling",
+                      "text": "Beard Styling"
+                    },
+                    {
+                      "id": "advanced-facial",
+                      "text": "Advanced Facial"
+                    },
+                    {
+                      "id": "head-shoulder-massage",
+                      "text": "Head & Shoulder Massage"
+                    }
+                  ],
+                  "buttonText": "Book Now",
+                  "buttonUrl": "#contact",
+                  "featured": false,
+                  "badge": ""
+                }
+              ]
+            }
+          }
+        },
+        "Gallery": {
+          "variants": {
+            "MensSalonGallery1": {
+              "id": "gallery",
+              "label": "Our Gallery",
+              "titleTop": "Inside Our",
+              "titleAccent": "Grooming Studio",
+              "description": "A glimpse of our services, style, and grooming experience.",
+              "items": [
+                {
+                  "id": "beard-trim",
+                  "title": "Beard Trim",
+                  "image": "/images/gallery-beard-trim.webp"
+                },
+                {
+                  "id": "fade-haircut",
+                  "title": "Fade Haircut",
+                  "image": "/images/gallery-fade-haircut.webp"
+                },
+                {
+                  "id": "face-mask",
+                  "title": "Face Mask",
+                  "image": "/images/gallery-face-mask.webp"
+                },
+                {
+                  "id": "hair-wash",
+                  "title": "Hair Wash",
+                  "image": "/images/gallery-hair-wash.webp"
+                },
+                {
+                  "id": "head-massage",
+                  "title": "Head Massage",
+                  "image": "/images/gallery-head-massage.webp"
+                },
+                {
+                  "id": "razor-shave",
+                  "title": "Razor Shave",
+                  "image": "/images/gallery-razor-shave.webp"
+                },
+                {
+                  "id": "hot-towel",
+                  "title": "Hot Towel Steam",
+                  "image": "/images/gallery-hot-towel.webp"
+                },
+                {
+                  "id": "scissor-cut",
+                  "title": "Scissor Cut",
+                  "image": "/images/gallery-scissor-cut.webp"
+                }
+              ],
+              "viewerLabel": "Photo viewer",
+              "openLabel": "Open photo: {title}",
+              "closeLabel": "Close photo",
+              "previousLabel": "Previous photo",
+              "nextLabel": "Next photo"
+            }
+          }
+        },
+        "Testimonials": {
+          "variants": {
+            "MensSalonTestimonials1": {
+              "id": "testimonials",
+              "label": "Our Happy Clients",
+              "titleTop": "Here's What Our Satisfied",
+              "titleAccent": "Clients Are Saying",
+              "rating": 5,
+              "ratingLabel": "Rated {rating} out of 5",
+              "showLabel": "Show review by {name}",
+              "startIndex": 1,
+              "items": [
+                {
+                  "id": "rohit-sharma",
+                  "name": "Rohit Sharma",
+                  "quote": "“Excellent service and a very professional team. The grooming experience was relaxing and the results were outstanding. Highly recommended!”",
+                  "image": "/images/client-rohit-sharma.webp"
+                },
+                {
+                  "id": "amit-verma",
+                  "name": "Amit Verma",
+                  "quote": "“Great atmosphere, skilled staff, and premium grooming services. I always leave feeling refreshed and confident. This is now my go-to grooming studio.”",
+                  "image": "/images/client-amit-verma.webp"
+                },
+                {
+                  "id": "karan-mehta",
+                  "name": "Karan Mehta",
+                  "quote": "“Top-notch grooming services with attention to every detail. The staff is friendly and the studio has a very premium feel. Totally worth it!”",
+                  "image": "/images/client-karan-mehta.webp"
+                }
+              ]
+            }
+          }
+        },
+        "Contact": {
+          "variants": {
+            "MensSalonContact1": {
+              "id": "contact",
+              "label": "Contact Us",
+              "titleTop": "Get in Touch With",
+              "titleAccent": "Men’s Salon",
+              "description": "Have a question, need an appointment, or want to know more about our grooming services? We’re here to help!",
+              "image": "/images/contact-barber-chair.webp",
+              "imageAlt": "Black leather barber chair beside a lit arched mirror and shelves",
+              "formTitle": "Send Us a Message",
+              "formIcon": "LuScissors"
+            }
+          }
+        },
+        "ContactForm": {
+          "variants": {
+            "MensSalonContactForm1": {
+              "fields": {
+                "name": {
+                  "placeholder": "Your Name *",
+                  "icon": "LuUser"
+                },
+                "phone": {
+                  "placeholder": "Your Phone *",
+                  "icon": "LuPhone"
+                },
+                "email": {
+                  "placeholder": "Your Email *",
+                  "icon": "LuMail"
+                },
+                "service": {
+                  "placeholder": "Service Interested In",
+                  "icon": "LuScissors"
+                },
+                "message": {
+                  "placeholder": "Your Message *",
+                  "icon": "LuMessageCircleMore"
+                }
+              },
+              "serviceOptions": [
+                "Haircut & Styling",
+                "Beard Grooming",
+                "Facial Treatment",
+                "Hair Treatment",
+                "Head Massage",
+                "Skin Care",
+                "Classic Grooming Package",
+                "Premium Grooming Package",
+                "Royal Grooming Package"
+              ],
+              "button": "Send Message",
+              "sending": "Sending…",
+              "successTitle": "Thank you, {name}!",
+              "success": "Your message has been received. We’ll get back to you shortly to confirm your appointment.",
+              "closeLabel": "Close message"
+            }
+          }
+        }
+      },
+      "templateComponents": {
+        "template-1": {
+          "shared": {
+            "Header": "MensSalonHeader1",
+            "Footer": "common.Footer"
+          },
+          "pages": {
+            "home": {
+              "components": [
+                {
+                  "key": "Hero",
+                  "component": "MensSalonHero1"
+                },
+                {
+                  "key": "About",
+                  "component": "MensSalonAbout1"
+                },
+                {
+                  "key": "Services",
+                  "component": "MensSalonServices1"
+                },
+                {
+                  "key": "Why",
+                  "component": "MensSalonWhy1"
+                },
+                {
+                  "key": "Packages",
+                  "component": "MensSalonPackages1"
+                },
+                {
+                  "key": "Gallery",
+                  "component": "MensSalonGallery1"
+                },
+                {
+                  "key": "Testimonials",
+                  "component": "MensSalonTestimonials1"
+                },
+                {
+                  "key": "Contact",
+                  "component": "MensSalonContact1"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
