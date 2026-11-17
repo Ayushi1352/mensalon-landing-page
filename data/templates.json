@@ -28,28 +28,29 @@
           "icon": "FaMapMarkerAlt",
           "title": "Our Location",
           "lines": [
-            "B-45, Greater Kailash,",
-            "New Delhi – 110048"
+            "123 Main Street,",
+            "New York, NY 10001, USA"
           ],
-          "url": "https://www.google.com/maps/search/?api=1&query=B-45+Greater+Kailash+New+Delhi+110048"
+          "url": "https://www.google.com/maps/search/?api=1&query=123+Main+Street+New+York+NY+10001+USA"
         },
         {
           "id": "call-us",
           "icon": "FaPhoneAlt",
           "title": "Call Us",
           "lines": [
-            "+91 98765 43210"
+            "+1 0000000000"
           ],
-          "url": "tel:+919876543210"
+          "url": "tel:+10000000000"
         },
         {
           "id": "email-us",
           "icon": "FaEnvelope",
+          "topBarIcon": "LuMail",
           "title": "Email Us",
           "lines": [
-            "info@menssalon.com"
+            "info@xyz.com"
           ],
-          "url": "mailto:info@menssalon.com"
+          "url": "mailto:info@xyz.com"
         }
       ]
     },
@@ -101,26 +102,6 @@
             "MensSalonHeader1": {
               "logoUrl": "/",
               "homeLabel": "Men’s Salon — back to top",
-              "topBarItems": [
-                {
-                  "id": "address",
-                  "icon": "FaMapMarkerAlt",
-                  "text": "1234 Maple Avenue, Suite 200, Los Angeles, CA 90015, USA",
-                  "url": "https://www.google.com/maps/search/?api=1&query=1234+Maple+Avenue+Suite+200+Los+Angeles+CA+90015+USA"
-                },
-                {
-                  "id": "phone",
-                  "icon": "FaPhoneAlt",
-                  "text": "+1 (213) 555-0198",
-                  "url": "tel:+12135550198"
-                },
-                {
-                  "id": "email",
-                  "icon": "LuMail",
-                  "text": "hello@menssalon.com",
-                  "url": "mailto:hello@menssalon.com"
-                }
-              ],
               "followLabel": "Follow Us :",
               "socialLinks": [
                 {
@@ -145,7 +126,7 @@
                   "id": "whatsapp",
                   "icon": "FaWhatsapp",
                   "label": "WhatsApp",
-                  "url": "https://wa.me/12135550198"
+                  "url": "https://wa.me/10000000000"
                 }
               ],
               "navLinks": [
@@ -538,6 +519,8 @@
               "description": "Have a question, need an appointment, or want to know more about our grooming services? We’re here to help!",
               "image": "/images/contact-barber-chair.webp",
               "imageAlt": "Black leather barber chair beside a lit arched mirror and shelves",
+              "imageWidth": 395,
+              "imageHeight": 820,
               "formTitle": "Send Us a Message",
               "formIcon": "ScissorsUp"
             }
@@ -568,17 +551,7 @@
                   "icon": "LuMessageCircleMore"
                 }
               },
-              "serviceOptions": [
-                "Haircut & Styling",
-                "Beard Grooming",
-                "Facial Treatment",
-                "Hair Treatment",
-                "Head Massage",
-                "Skin Care",
-                "Classic Grooming Package",
-                "Premium Grooming Package",
-                "Royal Grooming Package"
-              ],
+              "packageOption": "{title} Package",
               "button": "Send Message",
               "sending": "Sending…",
               "successTitle": "Thank you, {name}!",

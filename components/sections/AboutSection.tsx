@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { AboutData } from "@/types/templates.types";
-import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 import { AboutVideo } from "@/components/sections/AboutVideo";
 

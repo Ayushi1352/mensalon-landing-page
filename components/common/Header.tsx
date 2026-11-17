@@ -39,7 +39,7 @@ export const Header = ({ data, company }: { data?: HeaderData; company: CompanyD
       <div className="hidden bg-gradient-to-r font-accent from-[var(--color-gold-soft)] via-[var(--color-gold-light)] to-[var(--color-gold-soft)] text-[var(--color-heading)] md:block">
         <div className="flex h-11 items-center px-6 text-sm lg:h-[3.3rem] lg:pl-[3.65rem] lg:pr-[3.15rem] lg:text-[1.03rem]">
           <ul className="flex min-w-0 items-center">
-            {data.topBarItems.map((item, index) => {
+            {company.contactItems.map((item, index) => {
               const external = item.url.startsWith("http");
               return (
                 <li
@@ -55,8 +55,8 @@ export const Header = ({ data, company }: { data?: HeaderData; company: CompanyD
                     rel={external ? "noopener noreferrer" : undefined}
                     className="flex items-center gap-2 whitespace-nowrap transition-colors hover:text-[var(--color-bronze-dark)] lg:gap-[0.75rem]"
                   >
-                    <Icon name={item.icon} className="size-4 shrink-0 lg:size-[1.15rem]" strokeWidth={2} />
-                    {item.text}
+                    <Icon name={item.topBarIcon ?? item.icon} className="size-4 shrink-0 lg:size-[1.15rem]" strokeWidth={2} />
+                    {item.lines.join(" ")}
                   </a>
                 </li>
               );

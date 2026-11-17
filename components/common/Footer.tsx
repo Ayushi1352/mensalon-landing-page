@@ -17,7 +17,7 @@ export const Footer = async ({ data, company, links = [] }: { data?: FooterData;
   return (
     <footer className="bg-[var(--color-bg-black)] font-footer text-[var(--color-white)]">
       <div className="mx-auto max-w-[90rem] px-4 pt-14 text-center sm:px-6 lg:px-[8.4rem] lg:pt-[3.9rem]">
-        <Image src={company.logo} alt={company.name} width={company.logoWidth} height={company.logoHeight} sizes="(min-width: 1024px) 34vw, 320px" className="mx-auto h-auto w-72 sm:w-80 lg:w-[30.5rem]" />
+        <Image src={company.logo} alt={company.logoAlt} width={company.logoWidth} height={company.logoHeight} sizes="(min-width: 1024px) 34vw, 320px" className="mx-auto h-auto w-72 sm:w-80 lg:w-[30.5rem]" />
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-[var(--color-white-90)] lg:mt-[0.9rem] lg:max-w-[50rem] lg:text-[1.03rem] lg:leading-[1.5rem]">{data.description}</p>
 
         <div className="mt-7 lg:mt-[0.7rem]">

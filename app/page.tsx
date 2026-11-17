@@ -12,6 +12,13 @@ import { ContactSection } from "@/components/sections/ContactSection";
 const templateData: MensSalonTemplateData = rawData;
 const sectionData = templateData.categories.MensSalon.sections;
 const commonData = templateData.common;
+const contactForm = sectionData.ContactForm?.variants?.MensSalonContactForm1;
+
+// The form's service list: every service card, then every package ("Classic Grooming Package")
+const serviceOptions = [
+  ...(sectionData.Services?.variants?.MensSalonServices1?.items ?? []).map((item) => item.title.replace(/\s*\n\s*/g, " ")),
+  ...(sectionData.Packages?.variants?.MensSalonPackages1?.items ?? []).map((item) => (contactForm?.packageOption ?? "{title}").replace("{title}", item.title)),
+];
 
 /*
   One landing page, sections in the order of the design. Each section's id (templates.json) matches the
@@ -29,8 +36,9 @@ export default function Home() {
       <TestimonialsSection data={sectionData.Testimonials?.variants?.MensSalonTestimonials1} />
       <ContactSection
         data={sectionData.Contact?.variants?.MensSalonContact1}
-        form={sectionData.ContactForm?.variants?.MensSalonContactForm1}
+        form={contactForm}
         company={commonData.company}
+        serviceOptions={serviceOptions}
       />
     </main>
   );

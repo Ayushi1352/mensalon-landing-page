@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { WhyData } from "@/types/templates.types";
-import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 
 /** Tall photo in a two-corner gold frame on the left; title, text, four numbers and a wide photo on the right */

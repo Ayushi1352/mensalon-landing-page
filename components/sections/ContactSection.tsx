@@ -1,11 +1,19 @@
 import Image from "next/image";
 import type { CompanyData, ContactData, ContactFormData } from "@/types/templates.types";
 import { ContactForm } from "@/components/sections/ContactForm";
-import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 
 /** Title, text and contact details on the left; on desktop a barber chair stands behind the message card on the right */
-export const ContactSection = ({ data, form, company }: { data?: ContactData; form?: ContactFormData; company: CompanyData }) => {
+type Props = {
+  data?: ContactData;
+  form?: ContactFormData;
+  company: CompanyData;
+  /** choices of the form's service list (built in app/page.tsx from the Services and Packages sections) */
+  serviceOptions: string[];
+};
+
+export const ContactSection = ({ data, form, company, serviceOptions }: Props) => {
   if (!data) return null;
 
   return (
@@ -14,8 +22,8 @@ export const ContactSection = ({ data, form, company }: { data?: ContactData; fo
         <Image
           src={data.image}
           alt={data.imageAlt}
-          width={395}
-          height={820}
+          width={data.imageWidth}
+          height={data.imageHeight}
           quality={90}
           sizes="19vw"
           className="absolute left-[29.05rem] top-[2.25rem] hidden h-auto w-[18.5rem] lg:block"
@@ -74,7 +82,7 @@ export const ContactSection = ({ data, form, company }: { data?: ContactData; fo
             <span aria-hidden="true" className="h-0.5 w-16 bg-gradient-to-l from-transparent to-current lg:h-[0.1rem] lg:w-[6rem]" />
           </div>
           <h3 className="mt-1 text-center font-heading text-3xl font-bold text-[var(--color-heading)] sm:text-4xl lg:mt-[0.3rem] lg:text-[2.5rem]">{data.formTitle}</h3>
-          <ContactForm data={form} />
+          <ContactForm data={form} serviceOptions={serviceOptions} />
         </div>
       </div>
     </section>

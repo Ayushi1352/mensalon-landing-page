@@ -39,7 +39,7 @@ const ServiceSelect = ({ icon, placeholder, options }: { icon: string; placehold
 };
 
 /** Contact form with a dummy submit: sending state, then a thank-you message in place of the button */
-export const ContactForm = ({ data }: { data?: ContactFormData }) => {
+export const ContactForm = ({ data, serviceOptions }: { data?: ContactFormData; serviceOptions: string[] }) => {
   const submit = useDummySubmit();
   if (!data) return null;
   const { fields } = data;
@@ -62,7 +62,7 @@ export const ContactForm = ({ data }: { data?: ContactFormData }) => {
       <Field icon={fields.email.icon} className="sm:col-span-2">
         <input name="email" type="email" required placeholder={fields.email.placeholder} aria-label={fields.email.placeholder} autoComplete="email" className={field} />
       </Field>
-      <ServiceSelect icon={fields.service.icon} placeholder={fields.service.placeholder} options={data.serviceOptions} />
+      <ServiceSelect icon={fields.service.icon} placeholder={fields.service.placeholder} options={serviceOptions} />
       <div className="relative sm:col-span-2">
         <textarea
           name="message"

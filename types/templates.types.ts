@@ -27,6 +27,8 @@ export interface LinkItem {
 export interface ContactItem {
   id: string;
   icon: string;
+  /** icon in the header's top bar, when it differs from `icon` */
+  topBarIcon?: string;
   title: string;
   lines: string[];
   url: string;
@@ -57,17 +59,9 @@ export interface FooterData {
   copyrightText: string;
 }
 
-export interface TopBarItem {
-  id: string;
-  icon: string;
-  text: string;
-  url: string;
-}
-
 export interface HeaderData {
   logoUrl: string;
   homeLabel: string;
-  topBarItems: TopBarItem[];
   followLabel: string;
   socialLinks: SocialLink[];
   navLinks: LinkItem[];
@@ -216,6 +210,8 @@ export interface ContactData {
   description: string;
   image: string;
   imageAlt: string;
+  imageWidth: number;
+  imageHeight: number;
   formTitle: string;
   formIcon: string;
 }
@@ -233,7 +229,8 @@ export interface ContactFormData {
     service: FormField;
     message: FormField;
   };
-  serviceOptions: string[];
+  /** how a package appears in the service list; the services and packages themselves come from their sections */
+  packageOption: string;
   button: string;
   sending: string;
   successTitle: string;

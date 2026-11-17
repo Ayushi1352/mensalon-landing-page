@@ -1,6 +1,6 @@
 import type { PackageItem, PackagesData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
-import { MustacheDivider } from "@/components/ui/MustacheDivider";
+import { MustacheDivider } from "@/components/ui/SectionHeading";
 
 /** Ribbon-style price tag (ends cut inwards), flanked by thin lines */
 const PriceTag = ({ price, featured }: { price: string; featured: boolean }) => (

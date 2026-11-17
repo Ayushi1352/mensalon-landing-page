@@ -1,6 +1,5 @@
 import type { GalleryData } from "@/types/templates.types";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { MustacheDivider } from "@/components/ui/MustacheDivider";
+import { Eyebrow, MustacheDivider } from "@/components/ui/SectionHeading";
 import { GalleryGrid } from "@/components/sections/GalleryGrid";
 
 /** Centred heading with the mustache ornament above eight gold-framed photos */

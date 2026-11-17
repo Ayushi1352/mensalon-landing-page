@@ -1,6 +1,5 @@
 import type { TestimonialsData } from "@/types/templates.types";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { MustacheDivider } from "@/components/ui/MustacheDivider";
+import { Eyebrow, MustacheDivider } from "@/components/ui/SectionHeading";
 import { TestimonialSlider } from "@/components/sections/TestimonialSlider";
 
 /** Black band with a thin gold arc in the corner, a two-line title and the review cards */
