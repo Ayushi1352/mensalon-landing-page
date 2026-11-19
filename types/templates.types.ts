@@ -126,7 +126,10 @@ export interface ServicesData {
 export interface StatItem {
   id: string;
   icon: string;
-  value: string;
+  /** number the counter runs up to */
+  value: number;
+  /** shown right after the number, e.g. "K+" or "%" */
+  suffix?: string;
   label: string;
 }
 
@@ -210,8 +213,6 @@ export interface ContactData {
   description: string;
   image: string;
   imageAlt: string;
-  imageWidth: number;
-  imageHeight: number;
   formTitle: string;
   formIcon: string;
 }

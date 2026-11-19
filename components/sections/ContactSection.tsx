@@ -19,15 +19,10 @@ export const ContactSection = ({ data, form, company, serviceOptions }: Props) =
   return (
     <section id={data.id} className="scroll-mt-[4.5rem] bg-[var(--color-bg-main)] py-[var(--section-gap)] lg:scroll-mt-[5.5rem] lg:pb-[3.5rem] lg:pt-[4.1rem]">
       <div className="relative mx-auto grid max-w-[90rem] gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_39.4rem] lg:gap-0 lg:pl-[3.65rem] lg:pr-[3rem]">
-        <Image
-          src={data.image}
-          alt={data.imageAlt}
-          width={data.imageWidth}
-          height={data.imageHeight}
-          quality={90}
-          sizes="19vw"
-          className="absolute left-[29.05rem] top-[2.25rem] hidden h-auto w-[18.5rem] lg:block"
-        />
+        {/* desktop: chair photo in the design's 395×820 slot between the text and the form; any photo is cropped to fit */}
+        <div className="absolute left-[29.05rem] top-[2.25rem] hidden aspect-[395/820] w-[18.5rem] lg:block">
+          <Image src={data.image} alt={data.imageAlt} fill quality={90} sizes="19vw" className="object-cover object-bottom" />
+        </div>
 
         <div data-reveal className="relative">
           <Eyebrow

@@ -68,14 +68,14 @@ export const HeroSection = ({ data }: { data?: HeroData }) => {
           className="text-xs !font-medium tracking-[0.3em] text-[var(--color-white-90)] lg:text-[1.03rem] lg:tracking-[0.3em]"
           lineClassName="w-12 text-[var(--color-gold-soft)] lg:w-[4.5rem] lg:!h-px"
         />
-        <h1 className="mt-4 font-heading text-[2.875rem] font-bold leading-[1.02] tracking-[-0.01em] text-[var(--color-white)] sm:text-[3.75rem] lg:mt-[0.95rem] lg:text-[4.55rem] lg:leading-[0.95]">
+        <h1 className="mt-4 font-heading text-[2.875rem] font-bold leading-[1.02] tracking-[-0.01em] text-[var(--color-white)] sm:text-[3.75rem] lg:mt-[0.95rem] lg:text-[4.55rem] lg:leading-[1.05]">
           <span className="block">{data.titleTop}</span>
           <span className="text-[var(--color-hero-cream)]">{data.titleBottom}</span>{" "}
           <span className="bg-gradient-to-b from-[var(--color-gold-light)] via-[var(--color-gold-soft)] to-[var(--color-gold-deep)] bg-clip-text pr-[0.08em] italic text-transparent">
             {data.titleAccent}
           </span>
         </h1>
-        <p className="mt-5 max-w-sm font-accent text-lg leading-relaxed text-[var(--color-white-90)] sm:max-w-md lg:mt-[1rem] lg:max-w-none lg:whitespace-pre-line lg:text-[1.45rem] lg:leading-[1.82rem] lg:tracking-[0.01em]">
+        <p className="mt-5 max-w-sm font-accent text-lg leading-relaxed text-[var(--color-white-90)] sm:max-w-md lg:mt-[0.75rem] lg:max-w-none lg:whitespace-pre-line lg:text-[1.45rem] lg:leading-[1.82rem] lg:tracking-[0.01em]">
           {data.description}
         </p>
       </div>

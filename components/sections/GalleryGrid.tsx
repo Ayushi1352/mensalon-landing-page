@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRef, useState, type ReactNode } from "react";
 import type { GalleryData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
+import { fill } from "@/components/ui/text";
 
 const ViewerButton = ({ label, className, onClick, children }: { label: string; className: string; onClick: () => void; children: ReactNode }) => (
   <button
@@ -38,7 +39,7 @@ export const GalleryGrid = ({ data }: { data: GalleryData }) => {
             key={photo.id}
             type="button"
             onClick={() => show(i)}
-            aria-label={data.openLabel.replace("{title}", photo.title)}
+            aria-label={fill(data.openLabel, { title: photo.title })}
             data-reveal
             data-reveal-delay={(i % 4) * 80}
             className="group relative aspect-[445/290] cursor-zoom-in overflow-hidden rounded-xl border-2 border-[var(--color-gold-frame)] bg-[var(--color-bg-dark)] lg:rounded-[1rem] lg:border-[0.1rem]"

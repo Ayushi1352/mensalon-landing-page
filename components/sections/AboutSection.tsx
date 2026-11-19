@@ -29,8 +29,9 @@ export const AboutSection = ({ data }: { data?: AboutData }) => {
               data-reveal
               data-reveal-delay={(index + 1) * 100}
               // the first paragraph has a gold line before it and the second a light one, as in the design
-              className={`border-l-2 pl-5 text-base leading-relaxed text-[var(--color-text)] lg:text-[1.18rem] lg:leading-[1.69rem] ${
-                index === 0 ? "border-[var(--color-bronze-line)] lg:pl-[4.25rem] lg:pr-[2.7rem]" : "border-[var(--color-border-warm)] lg:pl-[2.95rem]"
+              // desktop keeps the design's line breaks (\n in templates.json); the second paragraph runs slightly past the padding, as in the design
+              className={`border-l-2 pl-5 text-base leading-relaxed text-[var(--color-text)] lg:whitespace-pre-line lg:text-[1.18rem] lg:leading-[1.69rem] ${
+                index === 0 ? "border-[var(--color-bronze-line)] lg:pl-[4.25rem] lg:pr-[2.7rem]" : "border-[var(--color-border-warm)] lg:-mr-[1rem] lg:pl-[2.95rem]"
               }`}
             >
               {text}
@@ -45,14 +46,14 @@ export const AboutSection = ({ data }: { data?: AboutData }) => {
               key={feature.id}
               data-reveal
               data-reveal-delay={index * 100}
-              className="group flex items-center gap-5 rounded-[1.5rem] bg-[var(--color-bg-main)] p-5 shadow-[0_0.75rem_2.5rem_-1rem_var(--color-shadow-card)] md:flex-col md:items-start lg:h-[9rem] lg:flex-row lg:items-center lg:gap-[2.25rem] lg:rounded-[1.875rem] lg:px-[1.73rem] lg:py-0"
+              className="group flex items-center gap-5 rounded-[1.5rem] bg-[var(--color-bg-main)] p-5 shadow-[0_0.75rem_2.5rem_-1rem_var(--color-shadow-card)] md:flex-col md:items-start lg:h-[9rem] lg:flex-row lg:items-center lg:gap-[2.25rem] lg:rounded-[1.875rem] lg:pl-[1.73rem] lg:pr-[0.5rem] lg:py-0"
             >
               <span className="grid size-16 shrink-0 place-items-center rounded-full bg-gradient-to-br from-[var(--color-amber-light)] to-[var(--color-bronze)] text-[var(--color-white)] shadow-[0_0.5rem_1.25rem_-0.5rem_var(--color-shadow-bronze)] transition-transform duration-500 group-hover:scale-105 lg:size-[5.6rem]">
                 <Icon name={feature.icon} className="size-8 lg:size-[2.75rem]" strokeWidth={1.7} />
               </span>
               <span>
                 <span className="block text-lg font-semibold text-[var(--color-heading)] transition-colors group-hover:text-[var(--color-bronze)] lg:text-[1.4rem]">{feature.title}</span>
-                <span className="mt-1 block text-base leading-snug text-[var(--color-text)] lg:mt-[0.35rem] lg:text-[1.22rem] lg:leading-[1.69rem]">{feature.text}</span>
+                <span className="mt-1 block text-base leading-snug text-[var(--color-text)] lg:mt-[0.35rem] lg:whitespace-pre-line lg:text-[1.22rem] lg:leading-[1.69rem]">{feature.text}</span>
               </span>
             </li>
           ))}

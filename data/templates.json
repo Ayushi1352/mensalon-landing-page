@@ -198,27 +198,27 @@
               "titleTop": "About Our",
               "titleAccent": "Men’s Salon",
               "paragraphs": [
-                "A modern men’s salon offering professional haircuts, beard grooming and personalized styling in a comfortable and relaxing environment.",
-                "Our team of skilled barbers focuses on precision, style and customer satisfaction to ensure you always leave looking your best."
+                "A modern men’s salon offering\nprofessional haircuts, beard grooming\nand personalized styling in a\ncomfortable and relaxing environment.",
+                "Our team of skilled barbers focuses\non precision, style and customer\nsatisfaction to ensure you always\nleave looking your best."
               ],
               "features": [
                 {
                   "id": "experienced-barbers",
                   "icon": "ScissorsUp",
                   "title": "Experienced Barbers",
-                  "text": "Skilled professionals for the perfect look."
+                  "text": "Skilled professionals for\nthe perfect look."
                 },
                 {
                   "id": "modern-setup",
                   "icon": "PiOfficeChair",
                   "title": "Modern Setup",
-                  "text": "A comfortable and stylish salon experience."
+                  "text": "A comfortable and\nstylish salon experience."
                 },
                 {
                   "id": "customer-focused",
                   "icon": "LuHeart",
                   "title": "Customer Focused",
-                  "text": "Quality service with a personal touch."
+                  "text": "Quality service with\na personal touch."
                 }
               ],
               "image": "/images/about-salon-interior.webp",
@@ -296,25 +296,29 @@
                 {
                   "id": "happy-clients",
                   "icon": "PiUsersThree",
-                  "value": "3K+",
+                  "value": 3,
+                  "suffix": "K+",
                   "label": "Happy Clients"
                 },
                 {
                   "id": "haircuts-done",
                   "icon": "ScissorsUp",
-                  "value": "5K+",
+                  "value": 5,
+                  "suffix": "K+",
                   "label": "Haircuts Done"
                 },
                 {
                   "id": "years-of-experience",
                   "icon": "TbCalendarStats",
-                  "value": "5+",
+                  "value": 5,
+                  "suffix": "+",
                   "label": "Years of\nExperience"
                 },
                 {
                   "id": "client-satisfaction",
                   "icon": "TrophyStar",
-                  "value": "100%",
+                  "value": 100,
+                  "suffix": "%",
                   "label": "Client\nSatisfaction"
                 }
               ],
@@ -519,8 +523,6 @@
               "description": "Have a question, need an appointment, or want to know more about our grooming services? We’re here to help!",
               "image": "/images/contact-barber-chair.webp",
               "imageAlt": "Black leather barber chair beside a lit arched mirror and shelves",
-              "imageWidth": 395,
-              "imageHeight": 820,
               "formTitle": "Send Us a Message",
               "formIcon": "ScissorsUp"
             }

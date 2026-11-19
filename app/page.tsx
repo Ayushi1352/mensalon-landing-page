@@ -1,5 +1,6 @@
 import rawData from "@/data/templates.json";
 import type { MensSalonTemplateData } from "@/types/templates.types";
+import { fill } from "@/components/ui/text";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
@@ -17,7 +18,7 @@ const contactForm = sectionData.ContactForm?.variants?.MensSalonContactForm1;
 // The form's service list: every service card, then every package ("Classic Grooming Package")
 const serviceOptions = [
   ...(sectionData.Services?.variants?.MensSalonServices1?.items ?? []).map((item) => item.title.replace(/\s*\n\s*/g, " ")),
-  ...(sectionData.Packages?.variants?.MensSalonPackages1?.items ?? []).map((item) => (contactForm?.packageOption ?? "{title}").replace("{title}", item.title)),
+  ...(sectionData.Packages?.variants?.MensSalonPackages1?.items ?? []).map((item) => fill(contactForm?.packageOption ?? "{title}", { title: item.title })),
 ];
 
 /*

@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { WhyData } from "@/types/templates.types";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
+import { CountUp } from "@/components/ui/CountUp";
 
 /** Tall photo in a two-corner gold frame on the left; title, text, four numbers and a wide photo on the right */
 export const WhySection = ({ data }: { data?: WhyData }) => {
@@ -26,7 +27,8 @@ export const WhySection = ({ data }: { data?: WhyData }) => {
               className="!justify-start text-sm tracking-[0.2em] text-[var(--color-amber-dark)] lg:-ml-[1.1rem] lg:text-[1.4rem] lg:tracking-[0.17em]"
               lineClassName="w-10 lg:w-[5.25rem]"
             />
-            <h2 className="mt-4 font-heading text-[2.375rem] font-medium leading-[1.15] text-[var(--color-heading-soft)] sm:text-5xl lg:mt-[1.5rem] lg:text-[3.57rem] lg:leading-[1.2]">
+            {/* phones: the title shrinks with the screen width so it never takes more than two lines */}
+            <h2 className="mt-4 font-heading text-[length:min(2.375rem,calc((100vw-2rem)/10.6))] font-medium leading-[1.15] text-[var(--color-heading-soft)] sm:text-5xl lg:mt-[1.5rem] lg:text-[3.57rem] lg:leading-[1.2]">
               {data.titleTop} <span className="text-[var(--color-amber)]">{data.titleAccent}</span>
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[var(--color-text-muted)] sm:text-lg lg:mt-[1.2rem] lg:pr-[2rem] lg:text-[1.33rem] lg:leading-[1.95rem]">{data.description}</p>
@@ -43,7 +45,9 @@ export const WhySection = ({ data }: { data?: WhyData }) => {
                 className={`relative flex flex-col items-center px-2 text-center before:absolute before:inset-y-0 before:left-0 before:w-px before:bg-[var(--color-border-warm)] lg:before:top-[2.05rem] ${index > 0 ? "" : "sm:before:hidden"} ${index % 2 === 1 ? "" : "max-sm:before:hidden"}`}
               >
                 <Icon name={stat.icon} className="size-12 text-[var(--color-amber)] lg:size-[4.4rem]" strokeWidth={1.5} />
-                <span className="mt-2 font-label text-[2rem] font-bold leading-none text-[var(--color-heading-soft)] lg:mt-[0.7rem] lg:text-[2.8rem]">{stat.value}</span>
+                <span className="mt-2 font-label text-[2rem] font-bold leading-none text-[var(--color-heading-soft)] lg:mt-[0.7rem] lg:text-[2.8rem]">
+                  <CountUp value={stat.value} suffix={stat.suffix} />
+                </span>
                 <span className="mt-2 whitespace-pre-line text-base leading-snug text-[var(--color-text-muted)] lg:mt-[0.6rem] lg:text-[1.3rem] lg:leading-[1.75rem]">{stat.label}</span>
               </li>
             ))}

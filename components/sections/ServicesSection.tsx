@@ -11,10 +11,11 @@ export const ServicesSection = ({ data }: { data?: ServicesData }) => {
       <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-[2.3rem]">
         <div data-reveal className="text-center">
           <p className="font-label text-sm font-bold uppercase tracking-[0.15em] text-[var(--color-gold)] lg:text-[1.3rem] lg:tracking-[0.12em]">{data.label}</p>
-          <div className="mt-2 flex items-center justify-center gap-4 lg:mt-[0.3rem] lg:gap-[2.3rem]">
-            <span aria-hidden="true" className="h-0.5 w-10 shrink-0 bg-[var(--color-gold)] sm:w-16 lg:h-[0.19rem] lg:w-[6.45rem]" />
-            <h2 className="font-heading text-[2.125rem] font-semibold leading-tight text-[var(--color-white)] sm:text-[2.5rem] lg:text-[2.67rem]">{data.title}</h2>
-            <span aria-hidden="true" className="h-0.5 w-10 shrink-0 bg-[var(--color-gold)] sm:w-16 lg:h-[0.19rem] lg:w-[6.45rem]" />
+          {/* phones: the title shrinks with the screen width so it never takes more than two lines */}
+          <div className="mt-2 flex items-center justify-center gap-3 sm:gap-4 lg:mt-[0.3rem] lg:gap-[2.3rem]">
+            <span aria-hidden="true" className="h-0.5 w-7 shrink-0 bg-[var(--color-gold)] sm:w-16 lg:h-[0.19rem] lg:w-[6.45rem]" />
+            <h2 className="font-heading text-[length:min(2.125rem,calc((100vw-6.5rem)/9.2))] font-semibold leading-tight text-[var(--color-white)] sm:text-[2.5rem] lg:text-[2.67rem]">{data.title}</h2>
+            <span aria-hidden="true" className="h-0.5 w-7 shrink-0 bg-[var(--color-gold)] sm:w-16 lg:h-[0.19rem] lg:w-[6.45rem]" />
           </div>
         </div>
 

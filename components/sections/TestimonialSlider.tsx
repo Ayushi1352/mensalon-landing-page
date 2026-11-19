@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import type { TestimonialItem, TestimonialsData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
+import { fill } from "@/components/ui/text";
 
 const AUTOPLAY_MS = 6000;
 
@@ -46,7 +47,7 @@ export const TestimonialSlider = ({ data }: { data: TestimonialsData }) => {
   const [index, setIndex] = useState(Math.min(data.startIndex, items.length - 1));
   const [paused, setPaused] = useState(false);
   const at = (offset: number) => items[(index + offset + items.length) % items.length];
-  const ratingLabel = data.ratingLabel.replace("{rating}", String(data.rating));
+  const ratingLabel = fill(data.ratingLabel, { rating: data.rating });
 
   useEffect(() => {
     if (paused || items.length < 2) return;
@@ -75,7 +76,7 @@ export const TestimonialSlider = ({ data }: { data: TestimonialsData }) => {
           <button
             key={item.id}
             type="button"
-            aria-label={data.showLabel.replace("{name}", item.name)}
+            aria-label={fill(data.showLabel, { name: item.name })}
             aria-current={n === index}
             onClick={() => setIndex(n)}
             className={`size-4 rounded-full border-2 transition-colors lg:size-[1.1rem] lg:border-[0.1rem] ${

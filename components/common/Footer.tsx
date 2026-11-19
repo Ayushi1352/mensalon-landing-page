@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { CompanyData, FooterData, LinkItem } from "@/types/templates.types";
 import { FooterNav } from "@/components/common/FooterNav";
 import { Icon } from "@/components/ui/Icon";
+import { fill } from "@/components/ui/text";
 
 /** Fills `{year}` in the copyright line; cached so the footer can still be prerendered. */
 async function currentYear() {
@@ -12,7 +13,7 @@ async function currentYear() {
 // Everything centred: logo, text and the header menu (`links`), then the contact details, social links and copyright.
 export const Footer = async ({ data, company, links = [] }: { data?: FooterData; company: CompanyData; links?: LinkItem[] }) => {
   if (!data) return null;
-  const copyright = data.copyrightText.replace("{year}", String(await currentYear()));
+  const copyright = fill(data.copyrightText, { year: await currentYear() });
 
   return (
     <footer className="bg-[var(--color-bg-black)] font-footer text-[var(--color-white)]">

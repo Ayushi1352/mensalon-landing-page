@@ -1,4 +1,5 @@
 import { Icon } from "@/components/ui/Icon";
+import { fill } from "@/components/ui/text";
 
 type FormSuccessProps = {
   name: string;
@@ -13,7 +14,8 @@ type FormSuccessProps = {
 
 /** Thank-you card shown after a (dummy) form submission; fades out on its own */
 export const FormSuccess = ({ name, title, message, leaving, visibleFor, onClose, closeLabel, className = "" }: FormSuccessProps) => {
-  const heading = name ? title.replace("{name}", name) : title.replace(", {name}", "").replace("{name}", "");
+  // without a name the ", {name}" part is dropped: "Thank you, {name}!" → "Thank you!"
+  const heading = fill(name ? title : title.replace(", {name}", ""), { name });
 
   return (
     <div

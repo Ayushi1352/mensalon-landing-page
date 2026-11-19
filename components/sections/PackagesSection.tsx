@@ -92,13 +92,14 @@ export const PackagesSection = ({ data }: { data?: PackagesData }) => {
     <section id={data.id} className="scroll-mt-[4.5rem] bg-[var(--color-bg-dark)] py-[var(--section-gap)] lg:scroll-mt-[5.5rem] lg:pb-[4.8rem] lg:pt-[4rem]">
       <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-[8.4rem]">
         <div data-reveal className="text-center">
-          <div className="flex items-center justify-center gap-4 lg:gap-[2.1rem]">
-            <span aria-hidden="true" className="h-px w-10 shrink-0 bg-[var(--color-gold-soft)] sm:w-16 lg:mt-[1.6rem] lg:h-[0.1rem] lg:w-[5.7rem]" />
+          {/* phones: the title shrinks with the screen width so it stays on one line */}
+          <div className="flex items-center justify-center gap-3 sm:gap-4 lg:gap-[2.1rem]">
+            <span aria-hidden="true" className="h-px w-7 shrink-0 bg-[var(--color-gold-soft)] sm:w-16 lg:mt-[1.6rem] lg:h-[0.1rem] lg:w-[5.7rem]" />
             <div>
               <p className="font-label text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-gold-soft)] lg:text-[1.3rem] lg:tracking-[0.3em]">{data.label}</p>
-              <h2 className="mt-1 font-heading text-[2.125rem] font-semibold leading-tight text-[var(--color-white)] sm:text-[2.5rem] lg:mt-0 lg:text-[2.5rem]">{data.title}</h2>
+              <h2 className="mt-1 whitespace-nowrap font-heading text-[length:min(2.125rem,calc((100vw-6.5rem)/8.6))] font-semibold leading-tight text-[var(--color-white)] sm:text-[2.5rem] lg:mt-0 lg:text-[2.5rem]">{data.title}</h2>
             </div>
-            <span aria-hidden="true" className="h-px w-10 shrink-0 bg-[var(--color-gold-soft)] sm:w-16 lg:mt-[1.6rem] lg:h-[0.1rem] lg:w-[5.7rem]" />
+            <span aria-hidden="true" className="h-px w-7 shrink-0 bg-[var(--color-gold-soft)] sm:w-16 lg:mt-[1.6rem] lg:h-[0.1rem] lg:w-[5.7rem]" />
           </div>
           <p className="mt-2 text-base text-[var(--color-white-85)] lg:mt-0 lg:text-[0.97rem]">{data.description}</p>
           <MustacheDivider className="mt-1 text-[var(--color-gold-soft)] lg:-mt-[0.2rem]" lineClassName="w-20 lg:w-[7.5rem]" mustacheClassName="h-3.5 w-9 lg:h-[0.95rem] lg:w-[2.6rem]" />
